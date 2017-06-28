@@ -1,0 +1,30 @@
+{
+  "name": "rest-test",
+  "version": "1.0.0",
+  "description": "A purchases ledger web app that connects to an external API. Made for Bench's coding challenge following their [guidelines](http://resttest.bench.co/front-end).",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server/index.js",
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svaldivia/restTest-purchasesLedger.git"
+  },
+  "author": "Sebastian Valdivia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/svaldivia/restTest-purchasesLedger/issues"
+  },
+  "homepage": "https://github.com/svaldivia/restTest-purchasesLedger#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.6.4",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0"
+  }
+}
