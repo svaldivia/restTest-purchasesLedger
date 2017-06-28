@@ -5,5 +5,8 @@
 
   .config(($urlRouterProvider, $locationProvider) => {
     $locationProvider.html5Mode(true);
+  })
+  .config(function(RestTestStateConfigProvider) {
+    RestTestStateConfigProvider.initialize();
   });
 })();
