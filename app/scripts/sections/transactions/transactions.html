@@ -21,7 +21,11 @@
     <strong>{{ vm.error }}</strong>
   </div>
 
-  <div ng-repeat="transaction in vm.transactions" class="row transaction-list-entry pd-double border border-vertical">
+  <div ng-if="vm.isLoading" class="row bg-info pd-double text-center">
+    <strong>Loading 🙃</strong>
+  </div>
+
+  <div ng-repeat="transaction in vm.transactions" class="row transaction-list-entry pd-double border border-vertical anim-fadeIn">
     <div class="col-sm-2">
       {{ transaction.Date | date }}
     </div>
