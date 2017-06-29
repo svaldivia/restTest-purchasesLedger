@@ -24,5 +24,9 @@
             vm.transactions = transactions;
         });
     };
+
+    function calculateTotal() {
+      //TODO
+    }
   }
 })();

@@ -1,0 +1,31 @@
+.transaction-list {
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+.transaction-list-header {
+  background-color: white;
+  color: $aquablue;
+  font-weight: bold;
+}
+
+
+.transaction-list-entry {
+  background-color: rgb(249, 248, 247);
+  color: $gray-light;
+
+  &:hover {
+    color: $aquablue;
+    transition: color 0.2s ease-out;
+  }
+}
+
+.transaction-list-entry .focus-text{
+  color: black;
+  font-weight: bold;
+}
+
+.transaction-list-entry:hover .focus-text{
+  color: $aquablue;
+  transition: color 0.2s ease-out;
+  font-weight: bold;
+}

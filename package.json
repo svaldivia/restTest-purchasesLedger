@@ -4,8 +4,13 @@
   "description": "A purchases ledger web app that connects to an external API. Made for Bench's coding challenge following their [guidelines](http://resttest.bench.co/front-end).",
   "main": "index.js",
   "scripts": {
-    "start": "node ./server/index.js",
-    "test": "karma start"
+    "node:server": "node ./server/index.js",
+    "test": "karma start",
+    "build-task:scss-compile": "node-sass-chokidar --source-map true app/styles/main.scss -o app/styles/css",
+    "build-task:autoprefixer": "postcss app/styles/css/*.css --use autoprefixer -d app/styles/css",
+    "sass:build": "npm-run-all -p build-task:*",
+    "sass:watch": "chokidar 'app/styles/main.scss' -c 'npm run sass:build'",
+    "start": "npm-run-all -p sass:* node:*"
   },
   "repository": {
     "type": "git",
@@ -19,6 +24,7 @@
   "homepage": "https://github.com/svaldivia/restTest-purchasesLedger#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "chokidar-cli": "^1.2.0",
     "express": "^4.15.3",
     "request": "^2.81.0"
   },
@@ -26,6 +32,7 @@
     "jasmine-core": "^2.6.4",
     "karma": "^1.7.0",
     "karma-chrome-launcher": "^2.2.0",
-    "karma-jasmine": "^1.1.0"
+    "karma-jasmine": "^1.1.0",
+    "node-sass": "^4.5.3"
   }
 }

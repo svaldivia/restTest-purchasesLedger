@@ -1,1 +1,32 @@
-<p>{{ vm.transactions }}</p>
+<div class="container-fluid transaction-list">
+  <div class="row transaction-list-header pd-double">
+    <div class="col-md-2">
+      Date
+    </div>
+    <div class="col-md-4">
+      Company
+    </div>
+    <div class="col-md-4">
+      Account
+    </div>
+    <div class="col-md-2">
+      Total
+    </div>
+  </div>
+
+  <div ng-repeat="transaction in vm.transactions" class="row transaction-list-entry pd-double border border-vertical">
+    <div class="col-md-2">
+      {{ transaction.Date | date }}
+    </div>
+    <div class="col-md-4 focus-text">
+      {{ transaction.Company }}
+    </div>
+    <div class="col-md-4">
+      {{ transaction.Ledger }}
+    </div>
+    <div class="col-md-2 focus-text">
+      {{ transaction.Amount }}
+    </div>
+  </div>
+
+</div>
