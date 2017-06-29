@@ -8,7 +8,7 @@ A purchases ledger web app that connects to an external API. Made for Bench's co
 * [Run Tests](#run-tests)
 
 ## Improvements
-- Handle a large load of pages (potentially add pagination component).
+- Handle large loads of pages (potentially add pagination component).
 - Add tasks to build a `dist` folder for deployed version.
 
 ## Running Locally
@@ -18,6 +18,7 @@ Before you start make sure that you have the following installed:
 - npm
 - bower
 - sass
+- karma
 
 ### Steps
 
