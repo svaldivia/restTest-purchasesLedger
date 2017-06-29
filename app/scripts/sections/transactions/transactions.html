@@ -1,31 +1,34 @@
 <div class="container-fluid transaction-list">
   <div class="row transaction-list-header pd-double">
-    <div class="col-md-2">
+    <div class="col-sm-2 hidden-xs">
       Date
     </div>
-    <div class="col-md-4">
+    <div class="col-sm-4 hidden-xs">
       Company
     </div>
-    <div class="col-md-4">
+    <div class="col-sm-4 hidden-xs">
       Account
     </div>
-    <div class="col-md-2">
+    <div class="col-xs-6 visible-xs">
       Total
+    </div>
+    <div class="col-xs-6 col-sm-2 text-right">
+      {{ vm.total | currency}}
     </div>
   </div>
 
   <div ng-repeat="transaction in vm.transactions" class="row transaction-list-entry pd-double border border-vertical">
-    <div class="col-md-2">
+    <div class="col-sm-2">
       {{ transaction.Date | date }}
     </div>
-    <div class="col-md-4 focus-text">
+    <div class="col-sm-4 focus-text">
       {{ transaction.Company }}
     </div>
-    <div class="col-md-4">
+    <div class="col-sm-4">
       {{ transaction.Ledger }}
     </div>
-    <div class="col-md-2 focus-text">
-      {{ transaction.Amount }}
+    <div class="col-sm-2 focus-text text-right">
+      {{ transaction.Amount | currency}}
     </div>
   </div>
 
