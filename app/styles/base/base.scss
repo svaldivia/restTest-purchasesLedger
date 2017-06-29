@@ -1,7 +1,9 @@
 $aquablue: rgb(0, 154, 158);
 $gray-light: rgb(155, 156, 159);
 
-
+main {
+  min-height: 100vh;
+}
 .header-bkg {
   background-color: $aquablue;
   color: white;

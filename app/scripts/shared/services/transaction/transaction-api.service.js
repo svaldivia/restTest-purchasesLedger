@@ -46,7 +46,7 @@
             });
         })
         .catch(error => {
-          $q.reject(error);
+          return $q.reject(error);
         });
     }
 
@@ -54,9 +54,10 @@
       return new Promise((resolve,reject) => {
         $http.get(`/api/transactions/${page}`)
           .then(response => {
-            //Check error and reject
-
             resolve(response.data.transactions);
+          })
+          .catch(error => {
+            reject(error);
           });
       });
     }

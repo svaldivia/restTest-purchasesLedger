@@ -16,6 +16,7 @@
     vm.transactions = [];
     vm.total = 0;
     vm.isLoading = true;
+    vm.error;
 
     activate();
     ////////////////////////
@@ -26,6 +27,9 @@
             vm.isLoading = false;
             vm.transactions = transactions;
             vm.total = calculateTotal();
+        })
+        .catch(error => {
+          vm.error = `⚠️ Something went wrong! ⚠️ ${error.status} - ${error.statusText} 🐒`;
         });
     };
 
