@@ -26,6 +26,7 @@
     "body-parser": "^1.17.2",
     "chokidar-cli": "^1.2.0",
     "express": "^4.15.3",
+    "npm-run-all": "^4.0.2",
     "request": "^2.81.0"
   },
   "devDependencies": {

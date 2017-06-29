@@ -1,6 +1,6 @@
 {
   "name": "rest-test",
-  "description": "A purchases ledger web app that connects to an external API. Made for Bench's coding challenge following their [guidelines](http://resttest.bench.co/front-end).",
+  "description": "A purchases ledger web app that connects to an external API",
   "main": "index.js",
   "authors": [
     "Sebastian Valdivia"
